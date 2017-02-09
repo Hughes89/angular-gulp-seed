@@ -1,8 +1,8 @@
 # Dependency directory
 node_modules/
 
-#Runtime data
+# Runtime data
 *.lock
 
-#Production
+# Production
 client/dist
