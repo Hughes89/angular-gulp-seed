@@ -11,7 +11,7 @@ var proxyMiddleware = require('http-proxy-middleware');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('js', function() {
-  return gulp.src(['./client/**.module.js', './client/**.config.js', './client/app/**/**.module.js', './client/app/**/*.js'])
+  return gulp.src(['./client/app/**.module.js', './client/app/**.config.js', './client/app/**/**.module.js', './client/app/**/*.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js', {newLine: ';'}))
     .pipe(babel({presets: ['es2015']}))
@@ -48,7 +48,7 @@ gulp.task('serve', ['watch'], function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./client/app.js', './client/app-routes.js', './client/app/**/**.module.js', './client/app/**/*.js'], ['js']);
+  gulp.watch(['./client/app/**.module.js', './client/app/**.config.js', './client/app/**/**.module.js', './client/app/**/*.js'], ['js']);
   gulp.watch('./client/css/*.css', ['css']);
   gulp.watch(['./client/*.html', './client/**/*.html'], ['html']);
 });
