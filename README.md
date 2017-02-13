@@ -48,19 +48,6 @@ Fork and clone repo
 
 
 ### Notes
-- **You must use $inject for everything or else the build will fail!!**
-  ```
-  angular
-    .module('app')
-    .controller('HomeController', HomeController);
-
-    HomeController.$inject = ['$location'];
-
-    function HomeController ($location) {
-      var vm = this;
-      vm.welcome = "Hello World!!!";
-    }
-  ```
 - The #! or hashbang has already been removed
 - As stated above the BrowserSync uses the node server as a proxy for any api calls it is recommended to start any API routes with /api
 
